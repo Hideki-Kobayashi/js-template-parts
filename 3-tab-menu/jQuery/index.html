@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./resources/styles/destyle.css" />
+    <link rel="stylesheet" href="./resources/styles/style.css" />
+  </head>
+  <body>
+    <div class="TabMenu">
+      <ul class="Tabs">
+        <li class="Tab Tab__isActive">タブ1</li>
+        <li class="Tab">タブ2</li>
+        <li class="Tab">タブ3</li>
+      </ul>
+      <ul class="Contents">
+        <li class="Content Content__isActive">1番目のコンテンツ</li>
+        <li class="Content">2番目のコンテンツ</li>
+        <li class="Content">3番目のコンテンツ</li>
+      </ul>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+      integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      const tabs = $(".Tab")
+      const contents = $(".Content")
+
+      tabs.on("click", function () {
+        tabs.removeClass("Tab__isActive")
+        contents.removeClass("Content__isActive")
+
+        $(this).addClass("Tab__isActive")
+        const index = $(this).index()
+        contents.eq(index).addClass("Content__isActive")
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,128 @@
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+a {
+  display: block;
+}
+
+.Header {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  background-color: #6ba6e7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Logo {
+  color: #fff;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.Button {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 30;
+  height: 60px;
+  padding-left: 10px;
+  padding-right: 20px;
+}
+
+.Button-Line__Top {
+  position: absolute;
+  top: 15px;
+  width: 40px;
+  height: 3px;
+  background-color: #fff;
+  transition: all 0.3s;
+}
+
+.Button-Line__Top__isOpen {
+  transform: translateY(13.5px) rotate(45deg);
+}
+
+.Button-Line__Medium {
+  width: 40px;
+  height: 3px;
+  background-color: #fff;
+  transition: all 0.3s;
+}
+
+.Button-Line__Medium__isOpen {
+  opacity: 0;
+}
+
+.Button-Line__Bottom {
+  position: absolute;
+  bottom: 15px;
+  width: 40px;
+  height: 3px;
+  background-color: #fff;
+  transition: all 0.3s;
+}
+
+.Button-Line__Bottom__isOpen {
+  transform: translateY(-13.5px) rotate(-45deg);
+}
+
+.Modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  margin: auto;
+  width: 400px;
+  height: 200px;
+  padding: 32px;
+  color: #fff;
+  background-color: #6ba6e7;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.Modal__isOpen {
+  visibility: visible;
+  opacity: 1;
+}
+
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 0;
+  height: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.Overlay__isOpen {
+  width: 100vw;
+  height: 100vh;
+  opacity: 1;
+}
+
+.Main {
+  width: 100%;
+  padding-top: 12px;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-bottom: 32px;
+  background-color: #eee;
+}
+
+.Section {
+  margin-top: 20px;
+  width: 100%;
+  height: 400px;
+  background-color: lightgreen;
+}

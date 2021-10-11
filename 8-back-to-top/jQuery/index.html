@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./resources/styles/destyle.css" />
+    <link rel="stylesheet" href="./resources/styles/style.css" />
+  </head>
+  <body>
+    <header class="Header">
+      <h1 class="Logo">LOGO</h1>
+    </header>
+    <button class="Button">トップに戻る</button>
+    <section class="FirstView">ファーストビューです</section>
+    <main class="Main">
+      <section id="Section1" class="Section">セクション1</section>
+      <section id="Section2" class="Section">セクション2</section>
+      <section id="Section3" class="Section">セクション3</section>
+      <section id="Section4" class="Section">セクション4</section>
+      <section id="Section5" class="Section">セクション5</section>
+      <section id="Section6" class="Section">セクション6</section>
+      <section id="Section7" class="Section">セクション7</section>
+    </main>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+      integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(".Button").on("click", function (event) {
+        window.scrollTo({ top: 0, behavior: "smooth" })
+      })
+    </script>
+  </body>
+</html>

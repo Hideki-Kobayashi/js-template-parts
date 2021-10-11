@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./resources/styles/destyle.css" />
+    <link rel="stylesheet" href="./resources/styles/style.css" />
+  </head>
+  <body>
+    <nav class="AcordionMenu">
+      <ul class="Menu">
+        <li class="Menu-Item">
+          <span class="Menu-Item-Label"
+            >メニュー1<img
+              class="Menu-Item-Label-Icon"
+              src="./resources/images/down-arrow.svg"
+              alt=""
+          /></span>
+          <ul class="SubMenu">
+            <li class="SubMenu-Item">
+              <a href="./sample.html" class="SubMenu-Item-Link">
+                サブメニュー1</a
+              >
+            </li>
+            <li class="SubMenu-Item">
+              <a href="./sample.html" class="SubMenu-Item-Link">
+                サブメニュー2</a
+              >
+            </li>
+            <li class="SubMenu-Item">
+              <a href="./sample.html" class="SubMenu-Item-Link">
+                サブメニュー3</a
+              >
+            </li>
+            <li class="SubMenu-Item">
+              <a href="./sample.html" class="SubMenu-Item-Link">
+                サブメニュー4</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="Menu-Item">
+          <span class="Menu-Item-Label"
+            >メニュー2<img
+              class="Menu-Item-Label-Icon"
+              src="./resources/images/down-arrow.svg"
+              alt=""
+          /></span>
+          <ul class="SubMenu">
+            <li class="SubMenu-Item">
+              <a href="./sample.html" class="SubMenu-Item-Link">
+                サブメニュー1</a
+              >
+            </li>
+            <li class="SubMenu-Item">
+              <a href="./sample.html" class="SubMenu-Item-Link">
+                サブメニュー2</a
+              >
+            </li>
+            <li class="SubMenu-Item">
+              <a href="./sample.html" class="SubMenu-Item-Link">
+                サブメニュー3</a
+              >
+            </li>
+            <li class="SubMenu-Item">
+              <a href="./sample.html" class="SubMenu-Item-Link">
+                サブメニュー4</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="Menu-Item">
+          <span class="Menu-Item-Label"
+            >メニュー3<img
+              class="Menu-Item-Label-Icon"
+              src="./resources/images/down-arrow.svg"
+              alt=""
+          /></span>
+          <ul class="SubMenu">
+            <li class="SubMenu-Item">
+              <a href="./sample.html" class="SubMenu-Item-Link">
+                サブメニュー1</a
+              >
+            </li>
+            <li class="SubMenu-Item">
+              <a href="./sample.html" class="SubMenu-Item-Link">
+                サブメニュー2</a
+              >
+            </li>
+            <li class="SubMenu-Item">
+              <a href="./sample.html" class="SubMenu-Item-Link">
+                サブメニュー3</a
+              >
+            </li>
+            <li class="SubMenu-Item">
+              <a href="./sample.html" class="SubMenu-Item-Link">
+                サブメニュー4</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="Menu-Item">
+          <span class="Menu-Item-Label"
+            >メニュー4<img
+              class="Menu-Item-Label-Icon"
+              src="./resources/images/down-arrow.svg"
+              alt=""
+          /></span>
+          <ul class="SubMenu">
+            <li class="SubMenu-Item">
+              <a href="./sample.html" class="SubMenu-Item-Link">
+                サブメニュー1</a
+              >
+            </li>
+            <li class="SubMenu-Item">
+              <a href="./sample.html" class="SubMenu-Item-Link">
+                サブメニュー2</a
+              >
+            </li>
+            <li class="SubMenu-Item">
+              <a href="./sample.html" class="SubMenu-Item-Link">
+                サブメニュー3</a
+              >
+            </li>
+            <li class="SubMenu-Item">
+              <a href="./sample.html" class="SubMenu-Item-Link">
+                サブメニュー4</a
+              >
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+      integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      const menuItemLabel = $(".Menu-Item-Label")
+      menuItemLabel.on("click", function () {
+        $(this).next().children().toggleClass("SubMenu-Item__isActive ")
+      })
+    </script>
+  </body>
+</html>

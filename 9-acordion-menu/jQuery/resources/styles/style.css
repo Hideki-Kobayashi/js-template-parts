@@ -1,0 +1,61 @@
+.AcordionMenu {
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+}
+
+.Menu {
+  width: 100%;
+  background-color: #fff;
+}
+
+.Menu-Item {
+  margin-bottom: 1px;
+  width: 100%;
+  background-color: #6ba6e7;
+}
+
+.Menu-Item-Label {
+  width: 100%;
+  height: 40px;
+  padding-left: 16px;
+  padding-right: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+}
+
+.Menu-Item-Label-Icon {
+  width: 20px;
+}
+
+.SubMenu {
+  width: 100%;
+  background-color: #fff;
+}
+
+.SubMenu-Item {
+  visibility: hidden;
+  width: 100%;
+  height: 0;
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.SubMenu-Item__isActive {
+  visibility: visible;
+  border-top: 1px solid #6ba6e7;
+  height: 32px;
+  opacity: 1;
+}
+
+.SubMenu-Item-Link {
+  color: #6ba6e7;
+}

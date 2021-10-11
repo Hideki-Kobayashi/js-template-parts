@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./resources/styles/destyle.css" />
+    <link rel="stylesheet" href="./resources/styles/style.css" />
+  </head>
+  <body>
+    <header class="Header">
+      <h1 class="Logo">LOGO</h1>
+      <button class="Button">
+        <div class="Button-Line__Top"></div>
+        <div class="Button-Line__Medium"></div>
+        <div class="Button-Line__Bottom"></div>
+      </button>
+      <div class="Modal">モーダルウィンドウです</div>
+      <div class="Overlay"></div>
+    </header>
+    <main class="Main">
+      <section class="Section"></section>
+      <section class="Section"></section>
+      <section class="Section"></section>
+      <section class="Section"></section>
+      <section class="Section"></section>
+      <section class="Section"></section>
+      <section class="Section"></section>
+    </main>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+      integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      const body = document.body
+      const button = $(".Button")
+      const buttonLineTop = $(".Button-Line__Top")
+      const buttonLineMedium = $(".Button-Line__Medium")
+      const buttonLineBottom = $(".Button-Line__Bottom")
+      const modal = $(".Modal")
+      const overlay = $(".Overlay")
+
+      let isModalOpen = false
+
+      const toggleModal = () => {
+        if (isModalOpen === false) {
+          openModal()
+          fixedScroll()
+          isModalOpen = true
+          return
+        }
+
+        if (isModalOpen === true) {
+          closeModal()
+          releaseScroll()
+          isModalOpen = false
+          return
+        }
+      }
+
+      const openModal = () => {
+        buttonLineTop.addClass("Button-Line__Top__isOpen")
+        buttonLineMedium.addClass("Button-Line__Medium__isOpen")
+        buttonLineBottom.addClass("Button-Line__Bottom__isOpen")
+        modal.addClass("Modal__isOpen")
+        overlay.addClass("Overlay__isOpen")
+      }
+
+      const closeModal = () => {
+        buttonLineTop.removeClass("Button-Line__Top__isOpen")
+        buttonLineMedium.removeClass("Button-Line__Medium__isOpen")
+        buttonLineBottom.removeClass("Button-Line__Bottom__isOpen")
+        modal.removeClass("Modal__isOpen")
+        overlay.removeClass("Overlay__isOpen")
+      }
+
+      const fixedScroll = () => {
+        document.body.style.top = `-${window.scrollY}px`
+        document.body.style.position = "fixed"
+      }
+
+      const releaseScroll = () => {
+        const top = document.body.style.top
+        document.body.style.position = ""
+        document.body.style.top = ""
+        window.scrollTo(0, parseInt(top || "0") * -1)
+      }
+
+      button.on("click", () => {
+        toggleModal()
+      })
+
+      overlay.on("click", () => {
+        toggleModal()
+      })
+    </script>
+  </body>
+</html>

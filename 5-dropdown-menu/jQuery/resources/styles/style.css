@@ -1,0 +1,64 @@
+.DropdownMenu {
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 800px;
+}
+
+.Menu {
+  box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  display: flex;
+}
+
+.Menu > * + * {
+  border-left: 1px solid #888;
+}
+
+.Menu-Item {
+  position: relative;
+  flex: 1;
+  cursor: pointer;
+}
+
+.Menu-Item-Label {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 50px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  color: #333;
+}
+
+.SubMenu {
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+  top: 40px;
+  width: 100%;
+  background-color: #6ba6e7;
+}
+
+.SubMenu-Item {
+  width: 100%;
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.SubMenu > * + * {
+  border-top: 1px solid #fff;
+}
+
+.Menu-Item:hover > .SubMenu {
+  transition: all 0.3s;
+  visibility: visible;
+  transform: translateY(10px);
+}
